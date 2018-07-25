@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+	{% for node in nodes %}
+	<a href="{% url 'node_detail' node.id %}">{{ node.name }}</a> <br/>
+	{% endfor %}
+</body>
+</html>

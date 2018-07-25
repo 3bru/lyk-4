@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ title }}</title>
+</head>
+<body>
+	<h1>{{ node.name }}</h1>
+	{% if incaming %}
+	  <h3>Incoming</h3>
+	  {%for edge in node.incoming.all %}
+	    {{ edge }} <br/>
+	  {% endfor %}
+	{% endif %}
+	{% if outcoming %}
+	  <h4>Outcoming</h4>
+	  {%for edge in node.outgoing.all %}
+	    {{ edge }} <br/>
+	  {% endfor %}
+	{% endif %}
+</body>
+</html>
